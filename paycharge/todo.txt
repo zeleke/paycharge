@@ -1,0 +1,17 @@
+Paycharge
+
+Web interface for maintaining a ledger for a business, like an income property. Rent and late fees, automatic calculation. Extensible for any other business with numerous revolving accounts.
+
+First I'll write it all in PHP and then later I'll write chunks in C++ and link it up with SWIG.
+
+
+FIX UP SQL FOR charge_all_rent()
+AUTOMATIC PAYMENTS (e.g., HUD, direct deposit)
+PRINTABLE RECEIPT + LEDGER
+IMPLEMENT PAYABLES
+ADD USER AUTHENTICATION
+AT-A-GLANCE INDEX PAGE
+BIG PROJECT: MAKE EVERYTHING CUSTOMIZABLE FOR ALL BIZ POLICIES, NOT JUST SUN CHASE
+ADD REGISTRATION, MULTI-DATABASES, SaSS SHIT
+CREATE MARKETING PAGE
+BUY DOMAIN "thatledger.com"

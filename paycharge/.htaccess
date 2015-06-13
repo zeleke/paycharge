@@ -1,0 +1,23 @@
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+#RewriteBase /
+
+# To externally redirect /dir/foo.php to /dir/foo
+#RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+#RewriteRule ^ %1 [R,L,NC]
+
+## To internally redirect /dir/foo to /dir/foo.php
+RewriteCond %{REQUEST_FILENAME}.php -f [NC]
+RewriteRule ^ %{REQUEST_URI}.php [L]
+
+#View ledger
+RewriteRule ^view\-ledger/([0-9]+)$ view_ledger.php?unit=$1
+RewriteRule ^view\-ledger/?$ view_ledger.php
+RewriteRule ^view/([0-9]+)$ view_ledger.php?unit=$1
+
+#Add payment, charge
+RewriteRule ^payment/?$ add_payment.php
+RewriteRule ^add\-payment/?$ add_payment.php
+RewriteRule ^charge/?$ add_charge.php
+RewriteRule ^add\-charge/?$ add_charge.php
